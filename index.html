@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>repl.it</title>
+        <link href="index.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body ng-app="myApp">
+	<form>
+    <div class="main" ng-controller="MainController">
+      <div class="container">
+
+        <h1>{{ title }}</h1>
+        <ul>
+            <li ng-repeat="x in Character">{{x.raceName}}, {{x.gender}}, {{x.age}} <br>
+        <div ng-click="x.skills.strength.show=!x.skills.strength.show">
+            Strength:           {{x.skills.strength.value()}} </div>
+        <div ng-show="x.skills.strength.show">
+            - Power:            {{x.skills.strength.power}} <br>
+            - Combat Technique: {{x.skills.strength.combat_technique}} </div>
+			  <div ng-click="x.skills.intelligence.show=!x.skills.intelligence.show">
+            Intelligence:       {{x.skills.intelligence.value()}} </div>
+			  <div ng-show="x.skills.intelligence.show">
+            - Foreign Languages: {{x.skills.intelligence.foreign_languages}} <br>
+            - Magical Sense:    {{x.skills.intelligence.magic_sense}} </div>
+			  <div ng-click="x.skills.dexterity.show=!x.skills.dexterity.show">
+            Dexterity:          {{x.skills.dexterity.value()}} </div>
+			  <div ng-show="x.skills.dexterity.show">
+            - Agility:          {{x.skills.dexterity.agility}} <br>
+            - Refelxes:         {{x.skills.dexterity.reflexes}} </div>
+			  <div ng-click="x.skills.stamina.show=!x.skills.stamina.show">
+            Stamina:            {{x.skills.stamina.value()}} </div>
+			  <div ng-show="x.skills.stamina.show">
+            - Tenacity:         {{x.skills.stamina.tenacity}} <br>
+            - Less Food needed: {{x.skills.stamina.less_food_needed}} </div>
+			  <div ng-click="x.skills.perception.show=!x.skills.perception.show">
+            Perception:         {{x.skills.perception.value()}} </div>
+			  <div ng-show="x.skills.perception.show">
+            - Observtion:       {{x.skills.perception.observation}} <br>
+            - Hearing:          {{x.skills.perception.hearing}} </div>
+            Luck:               {{x.skills.luck.value}} <br>
+            <a href={{x.raceName}}-Backstory.html class="button2">Choose Character</a>
+            
+            <p><br></p>
+            </li>
+        </ul>    
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="index.js"></script>
+	</form>
+    </body>
+</html>
