@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>repl.it</title>
+        <title>Timos Game</title>
         <link href="index.css" rel="stylesheet" type="text/css" />
     </head>
     <body ng-app="myApp">
@@ -12,67 +12,63 @@
       <div class="container">
 
         <h1>{{ title }}</h1>
-        <div class="skill" ng-repeat="x in Character">
-		<a href="{{x.raceName}}-Backstory.html">
-		<img src="img/{{x.raceName}}.jpg" alt= "{{x.raceName}}" width="300" height="200">
-		</a><br/>
+			<div class="skill" ng-repeat="x in Character">
+				<a href="{{x.raceName}}-Backstory.html">
+					<img src="img/{{x.raceName}}.jpg" alt="{{x.raceName}}" width="300" height="200">
+				</a><br />
 		
-		<div class="desc"><h4>{{x.raceName}}, {{x.gender}}, {{x.age}}</h4>
+				<div class="desc"><h4>{{x.raceName}}, {{x.gender}}, {{x.age}}</h4>
 			
-			<button class="accordion" ng-click="x.skills.strength.show=!x.skills.strength.show">
-			Strength:             {{x.skills.strength.value()}} 
-			</button>
-			<div class="panel" ng-show="x.skills.strength.show">
-			- Power:              {{x.skills.strength.power}} <br>
-			- Combat Technique:   {{x.skills.strength.combat_technique}}
-			</div>
+					<button class="accordion" ng-click="x.skills.strength.show=!x.skills.strength.show">
+				    	Strength:           {{x.skills.strength.value()}} 
+					</button>
+					<div class="panel" ng-show="x.skills.strength.show">
+						- Power:            {{x.skills.strength.power}} <br>
+						- Combat Technique: {{x.skills.strength.combat_technique}}
+					</div>
 			
-			<button class="accordion" ng-click="x.skills.wisdom.show=!x.skills.wisdom.show">
-			Wisdom:               {{x.skills.wisdom.value()}} 
-			</button>
-			<div class="panel" ng-show="x.skills.wisdom.show">
-			- Foreign Languages:  {{x.skills.wisdom.foreign_languages}} <br />
-			- Intelligence:       {{x.skills.wisdom.intelligence}} 
-			</div>
+					<button class="accordion" ng-click="x.skills.intelligence.show=!x.skills.intelligence.show">
+				    	Intelligence:       {{x.skills.intelligence.value()}} 
+					</button>
+				  	<div class="panel" ng-show="x.skills.intelligence.show">
+						- Foreign Languages: {{x.skills.intelligence.foreign_languages}} <br />
+						- Magical Sense:    {{x.skills.intelligence.magic_sense}} 
+					</div>
 			
-			<button class="accordion" ng-click="x.skills.dexterity.show=!x.skills.dexterity.show">
-			Dexterity:            {{x.skills.dexterity.value()}} 
-			</button>
-			<div class="panel" ng-show="x.skills.dexterity.show">
-			- Agility:            {{x.skills.dexterity.agility}} <br />
-			- Refelxes:           {{x.skills.dexterity.reflexes}} 
-			</div>
+					<button class="accordion" ng-click="x.skills.dexterity.show=!x.skills.dexterity.show">
+				    	Dexterity:          {{x.skills.dexterity.value()}} 
+					</button>
+					<div class="panel" ng-show="x.skills.dexterity.show">
+						- Agility:          {{x.skills.dexterity.agility}} <br />
+						- Refelxes:         {{x.skills.dexterity.reflexes}} 
+					</div>
 
-			<button class="accordion" ng-click="x.skills.stamina.show=!x.skills.stamina.show">
-			Stamina:              {{x.skills.stamina.value()}} 
-			</button>
-			<div class="panel" ng-show="x.skills.stamina.show">
-			- Tenacity:           {{x.skills.stamina.tenacity}} <br />
-			- Less Food needed:   {{x.skills.stamina.less_food_needed}} 
+					<button class="accordion" ng-click="x.skills.stamina.show=!x.skills.stamina.show">
+				    	Stamina:            {{x.skills.stamina.value()}} 
+					</button>
+					<div class="panel" ng-show="x.skills.stamina.show">
+				    	- Tenacity:         {{x.skills.stamina.tenacity}} <br />
+				    	- Less Food needed: {{x.skills.stamina.less_food_needed}} 
+					</div>
+					<button class="accordion" ng-click="x.skills.perception.show=!x.skills.perception.show">
+				    	Perception:         {{x.skills.perception.value()}} 
+					</button>
+					<div class="panel" ng-show="x.skills.perception.show">
+				    	- Observtion:       {{x.skills.perception.observation}} <br />
+				    	- Hearing:          {{x.skills.perception.hearing}} 
+					</div>
+				    <button class="accordion">
+						Luck:               {{x.skills.luck.value}}
+					</button>
+			<a href={{x.raceName}}-Backstory.html class="button2">Choose Character</a>
+
+				</div>
 			</div>
-			<button class="accordion" ng-click="x.skills.perception.show=!x.skills.perception.show">
-			Perception:           {{x.skills.perception.value()}} 
-			</button>
-			<div class="panel" ng-show="x.skills.perception.show">
-			- Observtion:         {{x.skills.perception.observation}} <br />
-			- Hearing:            {{x.skills.perception.hearing}} 
-			</div>
-			<button class="accordion" ng-click="x.skills.magic.show=!x.skills.magic.show">
-			Magic:                {{x.skills.magic.value()}} 
-			</button>
-			<div class="panel" ng-show="x.skills.magic.show">
-			- Magical Sense:      {{x.skills.magic.magical_sense}} <br />
-			- Premonition:        {{x.skills.magic.premonition}} 
-			</div>
-           
-            	<a href={{x.raceName}}-Backstory.html class="button2">Choose Character</a>
-            
-                </div>
-            </div>
+  
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     <script src="index.js"></script>
-	    </form>
+	</form>
     </body>
 </html>

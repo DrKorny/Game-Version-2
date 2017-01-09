@@ -1,9 +1,9 @@
 body {
-  font-family: Verdana,Sans-Serif;
+	font-family: Verdana,sans-serif;
 }
 h4 {
-  margin: 2px;
-  text-align: center;
+	margin: 2px;
+	text-align:center;
 }
 .button {
     background-color: #555555;
@@ -26,17 +26,17 @@ h4 {
     padding: 7px 16px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 15px;
     margin: 4px 2px;
     cursor: pointer;
+display:block;
 }
 .button2:hover {
     box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24),0 12px 25px 0 rgba(0,0,0,0.19);
 }
 
 /* styles to align characters in one row */
-.skill {
+div.skill {
     margin: 5px;
     border: 1px solid #ccc;
     float: left;
@@ -44,16 +44,16 @@ h4 {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
 
-.skill:hover {
+div.skill:hover {
     border: 1px solid #777;
 }
 
-.skill img {
+div.skill img {
     width: 100%;
     height: auto;
 }
 
-.desc {
+div.desc {
     padding: 5px;
 }
 
@@ -70,12 +70,12 @@ button.accordion {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.accordion.active, button.accordion:hover {
+button.accordion.active, button.accordion:hover {
     background-color: #ddd;
 }
 
 /* Style the accordion panel. Note: hidden by default */
-.panel {
+div.panel {
     padding: 0 18px;
     background-color: white;
     display: block;
