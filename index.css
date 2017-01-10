@@ -5,6 +5,15 @@ h4 {
 	margin: 2px;
 	text-align:center;
 }
+
+.main {
+	text-align: center;
+}
+
+.container {
+	display: inline-block;
+}
+
 .button {
     background-color: #555555;
     border: none;
